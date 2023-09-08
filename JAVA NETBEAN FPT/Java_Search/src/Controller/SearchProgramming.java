@@ -34,10 +34,12 @@ public class SearchProgramming extends Menu<String> {
     public void execute(int n) {
         switch (n) {
             case 1:
+                System.out.println("Mang cac so ngau nhien (da duoc sap xep):");
                 library.display(array);
                 linearSearch();
                 break;
             case 2:
+                System.out.println("Mang ngau nhien (da duoc sap xep):");
                 library.display(array);
                 binarySearch();
                 break;
@@ -48,7 +50,7 @@ public class SearchProgramming extends Menu<String> {
     }
 
     public void linearSearch() {
-        int value = library.getInt("\nEnter number to find: ", 0, 1000);
+        int value = library.getInt("\nEnter number to find", 0, 100);
         if (algorithm.linearSearch(array, value) != -1) {
             System.out.println("Linear Search: Phan tu " + value + " duoc tim thay tai vi tri " + algorithm.linearSearch(array, value));
         } else {
@@ -58,11 +60,11 @@ public class SearchProgramming extends Menu<String> {
     }
 
     public void binarySearch() {
-        int value = library.getInt("\nEnter number to find: ", 0, 1000);
+        int value = library.getInt("\nEnter number to find", 0, 100);
         if (algorithm.binarySearch(array, value) != -1) {
-            System.out.println("Linear Search: Phan tu " + value + " duoc tim thay tai vi tri " + algorithm.binarySearch(array, value));
+            System.out.println("Binary Search: Phan tu " + value + " duoc tim thay tai vi tri " + algorithm.binarySearch(array, value));
         } else {
-            System.out.println("Linear Search: Phan tu " + value + " khong ton tai trong mang");
+            System.out.println("Binary Search: Phan tu " + value + " khong ton tai trong mang");
         }
 
     }
