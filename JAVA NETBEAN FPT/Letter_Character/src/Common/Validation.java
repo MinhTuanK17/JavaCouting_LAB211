@@ -33,32 +33,32 @@ public class Validation {
 
         return value;
     }
-
-    public static int checkInt(String msg) {
-        return checkInt(msg, Integer.MIN_VALUE, Integer.MAX_VALUE);
-    }
-
-    public static int checkInt(String msg, int minRange, int maxRange) {
-        if (minRange > maxRange) {
-            int temp = minRange;
-            minRange = maxRange;
-            maxRange = temp;
-        }
-
-        int value = Integer.MIN_VALUE;
-
-        do {
-            try {
-                if (msg != null) {
-                    System.out.print(msg);
-                }
-                value = Integer.parseInt(scanner.nextLine());
-            } catch (NumberFormatException e) {
-                System.err.println("Invalid input! Please try again");
-            }
-        } while (value < minRange || value > maxRange);
-
-        return value;
-    }
-    
+//
+//    public static int checkInt(String msg) {
+//        return checkInt(msg, Integer.MIN_VALUE, Integer.MAX_VALUE);
+//    }
+//
+//    public static int checkInt(String msg, int minRange, int maxRange) {
+//        if (minRange > maxRange) {
+//            int temp = minRange;
+//            minRange = maxRange;
+//            maxRange = temp;
+//        }
+//
+//        int value = Integer.MIN_VALUE;
+//
+//        do {
+//            try {
+//                if (msg != null) {
+//                    System.out.print(msg);
+//                }
+//                value = Integer.parseInt(scanner.nextLine());
+//            } catch (NumberFormatException e) {
+//                System.err.println("Invalid input! Please try again");
+//            }
+//        } while (value < minRange || value > maxRange);
+//
+//        return value;
+//    }
+//    
 }
